@@ -1,7 +1,7 @@
 # プロジェクトダウンロード&起動
 
 ```bash
-$ git clone $ git clone https://github.com/dai-570415/react-redux-middleware-app.git
+$ git clone https://github.com/dai-570415/react-redux-middleware-app.git
 
 $ cd react-redux-middleware-app
 
