@@ -92,3 +92,16 @@ const store = createStore(
 );
 
 ```
+
+### middleware集約
+
+```jsx:index.js
+// middleware集約
+const middlewares = [ logger, storageMiddleware ];
+
+const store = createStore(
+  //...省略
+  // スプレッドオペレーターで登録
+  applyMiddleware(...middlewares)
+);
+```

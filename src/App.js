@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 const App = () => {
   return (
     <div className="App">
-      <Link to="./todo" className="link">Todo</Link>
+      <nav>
+        Home &gt; <Link to="./todo" className="link">Todo</Link>
+      </nav>
+      <main>
+        Hello!React!
+      </main>
     </div>
   );
 }

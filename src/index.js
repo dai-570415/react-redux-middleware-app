@@ -22,11 +22,15 @@ const storageMiddleware = store => next => action => {
 };
 const savedState = JSON.parse(localStorage.getItem('todos-state'));
 
+// middleware集約
+const middlewares = [ logger, storageMiddleware ];
+
 // ReducerをStateに登録
 const store = createStore(
   tasksReducer,
   savedState ? savedState : tasksReducer(undefined, { type: 'INIT' }),
-  applyMiddleware(logger, storageMiddleware)
+  // スプレッドオペレーターで登録
+  applyMiddleware(...middlewares)
 );
 
 // 最終htmlに集約
